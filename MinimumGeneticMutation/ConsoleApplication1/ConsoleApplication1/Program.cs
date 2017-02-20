@@ -48,7 +48,7 @@ namespace MinimumGeneticMutation
 			StringBuilder currentSequence = new StringBuilder(startSequence);
 			int mutations = 0;
 			
-			if(!ValidateInputs(startSequence, endSequence))
+			if(!ValidateInputs(startSequence, endSequence, geneBank))
 			{
 				Console.WriteLine("Invalid inputs.");
 				return -1;
@@ -82,9 +82,13 @@ namespace MinimumGeneticMutation
 			return mutations;
 		}
 
-		private static bool ValidateInputs(string startSequence, string endSequence)
+		private static bool ValidateInputs(string startSequence, string endSequence, string[] geneBank)
 		{
 			if(startSequence.Length != endSequence.Length)
+			{
+				return false;
+			}
+			else if(geneBank.Length == 0)
 			{
 				return false;
 			}

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "ConsoleApplication1\ConsoleApplication1.csproj", "{48E4B1DE-67E3-430B-AE9C-8AB2B7661BCD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinimumGeneticMutation", "ConsoleApplication1\MinimumGeneticMutation.csproj", "{48E4B1DE-67E3-430B-AE9C-8AB2B7661BCD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

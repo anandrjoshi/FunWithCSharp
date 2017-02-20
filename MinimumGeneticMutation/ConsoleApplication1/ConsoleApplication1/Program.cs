@@ -53,7 +53,7 @@ namespace MinimumGeneticMutation
 				Console.WriteLine("Invalid inputs.");
 				return -1;
 			}
-			for (int i = 0; i < startSequence.Length; i++)
+			for (int i = startSequence.Length -1; i >= 0 ; i--)
 			{
 				if(startSequence[i] != endSequence[i])
 				{

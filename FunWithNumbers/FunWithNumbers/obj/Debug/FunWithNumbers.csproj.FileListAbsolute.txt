@@ -1,0 +1,6 @@
+F:\StudyMaterial\VS2013\FunWithNumbers\FunWithNumbers\bin\Debug\FunWithNumbers.exe.config
+F:\StudyMaterial\VS2013\FunWithNumbers\FunWithNumbers\bin\Debug\FunWithNumbers.exe
+F:\StudyMaterial\VS2013\FunWithNumbers\FunWithNumbers\bin\Debug\FunWithNumbers.pdb
+F:\StudyMaterial\VS2013\FunWithNumbers\FunWithNumbers\obj\Debug\FunWithNumbers.csprojResolveAssemblyReference.cache
+F:\StudyMaterial\VS2013\FunWithNumbers\FunWithNumbers\obj\Debug\FunWithNumbers.exe
+F:\StudyMaterial\VS2013\FunWithNumbers\FunWithNumbers\obj\Debug\FunWithNumbers.pdb

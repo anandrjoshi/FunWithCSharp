@@ -16,13 +16,21 @@ namespace SortingAlgorithms
 		{
 			int[] arrayOfInts = {22,11,1,23,45,12,34,67,34,89,77,16,01,38,90,56,65,33,17,19,2,9,87,54,93,96,52,77,6,89,32,54,89,44,46,41,76,72,70,86,84,31,07,61,67,63};
 
-			int[] tempArray = arrayOfInts.Clone() as int[];
+			int[] bubbleSortInputArray = arrayOfInts.Clone() as int[];
 
-			Stopwatch watch = DoSortIntegers(BubbleSort.SortIntegers, tempArray);
+			Stopwatch watchBubbleSort = DoSortIntegers(BubbleSort.SortIntegers, bubbleSortInputArray);
 
 			Console.WriteLine("Un Sorted Array = {0} ", BuildOutputString(arrayOfInts));
-			Console.WriteLine("Sorted Array = {0} ", BuildOutputString(tempArray));
-			Console.WriteLine("Time taken = {0} ", watch.ElapsedTicks);
+			Console.WriteLine("Sorted Array with Bubble Sort = {0} ", BuildOutputString(bubbleSortInputArray));
+			Console.WriteLine("Time taken for Bubble Sort = {0} ", watchBubbleSort.ElapsedTicks);
+
+			int[] selectionSortInputArray = arrayOfInts.Clone() as int[];
+
+			Stopwatch watchSelectionSort = DoSortIntegers(SelectionSort.SortIntegers, selectionSortInputArray);
+
+			Console.WriteLine("Un Sorted Array = {0} ", BuildOutputString(arrayOfInts));
+			Console.WriteLine("Sorted Array with Selection Sort = {0} ", BuildOutputString(selectionSortInputArray));
+			Console.WriteLine("Time taken for Selection Sort = {0} ", watchSelectionSort.ElapsedTicks);
 
 			Console.ReadKey();
 		}

@@ -32,6 +32,14 @@ namespace SortingAlgorithms
 			Console.WriteLine("Sorted Array with Selection Sort = {0} ", BuildOutputString(selectionSortInputArray));
 			Console.WriteLine("Time taken for Selection Sort = {0} ", watchSelectionSort.ElapsedTicks);
 
+			int[] insertionSortInputArray = arrayOfInts.Clone() as int[];
+
+			Stopwatch watchInsertionSort = DoSortIntegers(InsertionSort.SortIntegers, insertionSortInputArray);
+
+			Console.WriteLine("Un Sorted Array = {0} ", BuildOutputString(arrayOfInts));
+			Console.WriteLine("Sorted Array with Insertion Sort = {0} ", BuildOutputString(insertionSortInputArray));
+			Console.WriteLine("Time taken for Insertion Sort = {0} ", watchInsertionSort.ElapsedTicks);
+
 			Console.ReadKey();
 		}
 

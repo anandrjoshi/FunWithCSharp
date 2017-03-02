@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Classes\BubbleSort.cs" />
     <Compile Include="Classes\Insertion.cs" />
+    <Compile Include="Classes\MergeSort.cs" />
     <Compile Include="Classes\QuickSort.cs" />
     <Compile Include="Classes\SelectionSort.cs" />
     <Compile Include="Program.cs" />

@@ -11,6 +11,7 @@ namespace SortingAlgorithms
 	class Program
 	{
 		public delegate void SortingAlgorithm(int[] arrayOfInts);
+		public delegate int[] SortingAlgorithmReturningInt(int[] arrayOfInts);
 
 		static void Main(string[] args)
 		{
@@ -48,6 +49,17 @@ namespace SortingAlgorithms
 
 			Console.WriteLine("Sorted Array with Quick Sort = {0} ", BuildOutputString(quickSortInputArray));
 			Console.WriteLine("Time taken for Quick Sort = {0} ", watchQuickSort.ElapsedTicks);
+
+			//Disadvantage of Abstract factory. Since MergeSort.SortIntegers could not conform to the delegate signature
+			//Could not use that and therefore has to have this implementation.
+			int[] mergeSortInputArray = arrayOfInts.Clone() as int[];
+			Stopwatch watch = new Stopwatch();
+			watch.Start();
+			int[] mergeSortedArray = MergeSort.SortIntegers(mergeSortInputArray);
+ 			watch.Stop();
+
+			Console.WriteLine("Sorted Array with Merge Sort = {0} ", BuildOutputString(mergeSortedArray));
+			Console.WriteLine("Time taken for Merge Sort = {0} ", watch.ElapsedTicks);
 
 			Console.ReadKey();
 		}

@@ -24,15 +24,15 @@ namespace Palindrome.Classes
 
 		public static bool CheckPalindromeInt(int inputInt)
 		{
-			string inputIntAsString = Convert.ToString(inputInt);
+			string inputIntAsString = Convert.ToString(inputInt < 0 ? inputInt*-1 : inputInt);
 			int length = inputIntAsString.Length;
 
 			int[] arrayOfInts = new int[length];
 
 			for (int i = length; i > 0; i-- )
 			{
-				arrayOfInts[i-1] = inputInt / Convert.ToInt32(Math.Pow(10, (i - 1)));
-				inputInt -= arrayOfInts[i - 1] * Convert.ToInt32(Math.Pow(10, (i - 1)));
+				arrayOfInts[i-1] = Convert.ToInt32(Convert.ToInt64(inputInt) / Convert.ToInt64(Math.Pow(10, (i - 1))));
+				inputInt -= Convert.ToInt32(Convert.ToInt64(arrayOfInts[i - 1]) * Convert.ToInt64(Math.Pow(10, (i - 1))));
 			}
 
 			for (int i = 0; i < arrayOfInts.Length/2; i++ )

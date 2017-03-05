@@ -14,7 +14,7 @@ namespace Palindrome
 			string inputString = Console.ReadLine();
 
 			bool isStringPalindrome = Palindrome.Classes.Palindrome.CheckPalindromeString(inputString);
-			string outputString = isStringPalindrome ? "is Palindrome" : "is not Plaindrome";
+			string outputString = isStringPalindrome ? "is Palindrome" : "is not Palindrome";
 
 			Console.WriteLine("Input string {0} : {1}", inputString, outputString);
 
@@ -22,7 +22,7 @@ namespace Palindrome
 			int inputInt = Convert.ToInt32(Console.ReadLine());
 
 			bool isIntPalindrome = Palindrome.Classes.Palindrome.CheckPalindromeInt(inputInt);
-			outputString = isIntPalindrome ? "is Palindrome" : "is not Plaindrome";
+			outputString = isIntPalindrome ? "is Palindrome" : "is not Palindrome";
 
 			Console.WriteLine("Input int {0} : {1}", inputInt, outputString);
 			Console.ReadKey();

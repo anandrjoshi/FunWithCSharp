@@ -21,7 +21,11 @@ namespace Palindrome.Classes
 			}
 			return true;
 		}
-
+		/// <summary>
+		/// Avoid converting the into to string and calling CheckPalindromeString. Whats the fun that?
+		/// </summary>
+		/// <param name="inputInt"></param>
+		/// <returns></returns>
 		public static bool CheckPalindromeInt(int inputInt)
 		{
 			string inputIntAsString = Convert.ToString(inputInt < 0 ? inputInt*-1 : inputInt);

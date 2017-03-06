@@ -22,7 +22,7 @@ namespace Palindrome.Classes
 			return true;
 		}
 		/// <summary>
-		/// Avoid converting the into to string and calling CheckPalindromeString. Whats the fun that?
+		/// Avoid converting the int to string and calling CheckPalindromeString. Whats the fun in that?
 		/// </summary>
 		/// <param name="inputInt"></param>
 		/// <returns></returns>

@@ -1,0 +1,12 @@
+﻿Create a base class named Flower.
+Create several child classes like Rose, Lily, etc.
+Each can have its own collection of petals. This collection can be a list or array or any other collection.
+Build a system that takes in a FLower and can iterate through petals of each flower without changing the iteration based on the collection of 
+petals implemented.
+
+Implement a Zoo class that has collection of Mammals, Birds, Insects, reptiles.
+Mammals class implements collection as List of strings
+Birds class implements collection as array of strings
+Insects class implements collection as ArrayList of strings
+Reptiles class implements collection as Dictionary of int and string.
+Zoo class should be able to iterate through all the animals collection agnostic.

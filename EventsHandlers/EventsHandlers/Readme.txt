@@ -1,0 +1,1 @@
+﻿Create a console calculator such that each calculator function is an event and event handler is where the actual operation happen.

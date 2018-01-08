@@ -42,17 +42,21 @@
 			this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
 			this.lblDOB = new System.Windows.Forms.Label();
 			this.gpbxPermanentAddress = new System.Windows.Forms.GroupBox();
-			this.lblPermAddr1 = new System.Windows.Forms.Label();
-			this.txtPermAddr1 = new System.Windows.Forms.TextBox();
-			this.txtPermAddr2 = new System.Windows.Forms.TextBox();
-			this.lblPermAddr2 = new System.Windows.Forms.Label();
+			this.cmbPermAddrCountry = new System.Windows.Forms.ComboBox();
+			this.cmbPermAddrState = new System.Windows.Forms.ComboBox();
+			this.lblPermAddrState = new System.Windows.Forms.Label();
+			this.lblPermAddrCountry = new System.Windows.Forms.Label();
 			this.txtPermAddrZip = new System.Windows.Forms.TextBox();
 			this.lblPermAddrZip = new System.Windows.Forms.Label();
-			this.lblPermAddrCountry = new System.Windows.Forms.Label();
-			this.lblPermAddrState = new System.Windows.Forms.Label();
-			this.cmbPermAddrState = new System.Windows.Forms.ComboBox();
-			this.cmbPermAddrCountry = new System.Windows.Forms.ComboBox();
+			this.txtPermAddrCity = new System.Windows.Forms.TextBox();
+			this.txtPermAddr2 = new System.Windows.Forms.TextBox();
+			this.lblPermAddrCity = new System.Windows.Forms.Label();
+			this.lblPermAddr2 = new System.Windows.Forms.Label();
+			this.txtPermAddr1 = new System.Windows.Forms.TextBox();
+			this.lblPermAddr1 = new System.Windows.Forms.Label();
 			this.gpbxTemporaryAddress = new System.Windows.Forms.GroupBox();
+			this.txtTempAddrCity = new System.Windows.Forms.TextBox();
+			this.lblTempAddrCity = new System.Windows.Forms.Label();
 			this.cmbTempAddrCountry = new System.Windows.Forms.ComboBox();
 			this.cmbTempAddrState = new System.Windows.Forms.ComboBox();
 			this.lblTempAddrState = new System.Windows.Forms.Label();
@@ -73,7 +77,7 @@
 			// 
 			this.OkCancelPanel.Controls.Add(this.btnCancel);
 			this.OkCancelPanel.Controls.Add(this.btnOk);
-			this.OkCancelPanel.Location = new System.Drawing.Point(12, 620);
+			this.OkCancelPanel.Location = new System.Drawing.Point(12, 675);
 			this.OkCancelPanel.Name = "OkCancelPanel";
 			this.OkCancelPanel.Size = new System.Drawing.Size(1092, 76);
 			this.OkCancelPanel.TabIndex = 0;
@@ -191,32 +195,77 @@
 			this.gpbxPermanentAddress.Controls.Add(this.lblPermAddrCountry);
 			this.gpbxPermanentAddress.Controls.Add(this.txtPermAddrZip);
 			this.gpbxPermanentAddress.Controls.Add(this.lblPermAddrZip);
+			this.gpbxPermanentAddress.Controls.Add(this.txtPermAddrCity);
 			this.gpbxPermanentAddress.Controls.Add(this.txtPermAddr2);
+			this.gpbxPermanentAddress.Controls.Add(this.lblPermAddrCity);
 			this.gpbxPermanentAddress.Controls.Add(this.lblPermAddr2);
 			this.gpbxPermanentAddress.Controls.Add(this.txtPermAddr1);
 			this.gpbxPermanentAddress.Controls.Add(this.lblPermAddr1);
 			this.gpbxPermanentAddress.Location = new System.Drawing.Point(12, 209);
 			this.gpbxPermanentAddress.Name = "gpbxPermanentAddress";
-			this.gpbxPermanentAddress.Size = new System.Drawing.Size(484, 395);
+			this.gpbxPermanentAddress.Size = new System.Drawing.Size(484, 460);
 			this.gpbxPermanentAddress.TabIndex = 9;
 			this.gpbxPermanentAddress.TabStop = false;
 			this.gpbxPermanentAddress.Text = "Permanent Address";
 			// 
-			// lblPermAddr1
+			// cmbPermAddrCountry
 			// 
-			this.lblPermAddr1.AutoSize = true;
-			this.lblPermAddr1.Location = new System.Drawing.Point(14, 72);
-			this.lblPermAddr1.Name = "lblPermAddr1";
-			this.lblPermAddr1.Size = new System.Drawing.Size(150, 32);
-			this.lblPermAddr1.TabIndex = 10;
-			this.lblPermAddr1.Text = "Address 1:";
+			this.cmbPermAddrCountry.FormattingEnabled = true;
+			this.cmbPermAddrCountry.Location = new System.Drawing.Point(170, 402);
+			this.cmbPermAddrCountry.Name = "cmbPermAddrCountry";
+			this.cmbPermAddrCountry.Size = new System.Drawing.Size(157, 39);
+			this.cmbPermAddrCountry.TabIndex = 19;
 			// 
-			// txtPermAddr1
+			// cmbPermAddrState
 			// 
-			this.txtPermAddr1.Location = new System.Drawing.Point(170, 72);
-			this.txtPermAddr1.Name = "txtPermAddr1";
-			this.txtPermAddr1.Size = new System.Drawing.Size(265, 38);
-			this.txtPermAddr1.TabIndex = 10;
+			this.cmbPermAddrState.FormattingEnabled = true;
+			this.cmbPermAddrState.Location = new System.Drawing.Point(170, 270);
+			this.cmbPermAddrState.Name = "cmbPermAddrState";
+			this.cmbPermAddrState.Size = new System.Drawing.Size(157, 39);
+			this.cmbPermAddrState.TabIndex = 18;
+			// 
+			// lblPermAddrState
+			// 
+			this.lblPermAddrState.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.lblPermAddrState.AutoSize = true;
+			this.lblPermAddrState.Location = new System.Drawing.Point(74, 273);
+			this.lblPermAddrState.Name = "lblPermAddrState";
+			this.lblPermAddrState.Size = new System.Drawing.Size(90, 32);
+			this.lblPermAddrState.TabIndex = 17;
+			this.lblPermAddrState.Text = "State:";
+			// 
+			// lblPermAddrCountry
+			// 
+			this.lblPermAddrCountry.AutoSize = true;
+			this.lblPermAddrCountry.Location = new System.Drawing.Point(42, 405);
+			this.lblPermAddrCountry.Name = "lblPermAddrCountry";
+			this.lblPermAddrCountry.Size = new System.Drawing.Size(122, 32);
+			this.lblPermAddrCountry.TabIndex = 16;
+			this.lblPermAddrCountry.Text = "Country:";
+			// 
+			// txtPermAddrZip
+			// 
+			this.txtPermAddrZip.Location = new System.Drawing.Point(170, 336);
+			this.txtPermAddrZip.Name = "txtPermAddrZip";
+			this.txtPermAddrZip.Size = new System.Drawing.Size(157, 38);
+			this.txtPermAddrZip.TabIndex = 13;
+			// 
+			// lblPermAddrZip
+			// 
+			this.lblPermAddrZip.AutoSize = true;
+			this.lblPermAddrZip.Location = new System.Drawing.Point(28, 339);
+			this.lblPermAddrZip.Name = "lblPermAddrZip";
+			this.lblPermAddrZip.Size = new System.Drawing.Size(138, 32);
+			this.lblPermAddrZip.TabIndex = 14;
+			this.lblPermAddrZip.Text = "Zip Code:";
+			// 
+			// txtPermAddrCity
+			// 
+			this.txtPermAddrCity.Location = new System.Drawing.Point(170, 210);
+			this.txtPermAddrCity.Name = "txtPermAddrCity";
+			this.txtPermAddrCity.Size = new System.Drawing.Size(265, 38);
+			this.txtPermAddrCity.TabIndex = 11;
 			// 
 			// txtPermAddr2
 			// 
@@ -224,6 +273,15 @@
 			this.txtPermAddr2.Name = "txtPermAddr2";
 			this.txtPermAddr2.Size = new System.Drawing.Size(265, 38);
 			this.txtPermAddr2.TabIndex = 11;
+			// 
+			// lblPermAddrCity
+			// 
+			this.lblPermAddrCity.AutoSize = true;
+			this.lblPermAddrCity.Location = new System.Drawing.Point(92, 213);
+			this.lblPermAddrCity.Name = "lblPermAddrCity";
+			this.lblPermAddrCity.Size = new System.Drawing.Size(72, 32);
+			this.lblPermAddrCity.TabIndex = 12;
+			this.lblPermAddrCity.Text = "City:";
 			// 
 			// lblPermAddr2
 			// 
@@ -234,60 +292,26 @@
 			this.lblPermAddr2.TabIndex = 12;
 			this.lblPermAddr2.Text = "Address 2:";
 			// 
-			// txtPermAddrZip
+			// txtPermAddr1
 			// 
-			this.txtPermAddrZip.Location = new System.Drawing.Point(170, 273);
-			this.txtPermAddrZip.Name = "txtPermAddrZip";
-			this.txtPermAddrZip.Size = new System.Drawing.Size(157, 38);
-			this.txtPermAddrZip.TabIndex = 13;
+			this.txtPermAddr1.Location = new System.Drawing.Point(170, 72);
+			this.txtPermAddr1.Name = "txtPermAddr1";
+			this.txtPermAddr1.Size = new System.Drawing.Size(265, 38);
+			this.txtPermAddr1.TabIndex = 10;
 			// 
-			// lblPermAddrZip
+			// lblPermAddr1
 			// 
-			this.lblPermAddrZip.AutoSize = true;
-			this.lblPermAddrZip.Location = new System.Drawing.Point(14, 273);
-			this.lblPermAddrZip.Name = "lblPermAddrZip";
-			this.lblPermAddrZip.Size = new System.Drawing.Size(138, 32);
-			this.lblPermAddrZip.TabIndex = 14;
-			this.lblPermAddrZip.Text = "Zip Code:";
-			// 
-			// lblPermAddrCountry
-			// 
-			this.lblPermAddrCountry.AutoSize = true;
-			this.lblPermAddrCountry.Location = new System.Drawing.Point(28, 339);
-			this.lblPermAddrCountry.Name = "lblPermAddrCountry";
-			this.lblPermAddrCountry.Size = new System.Drawing.Size(122, 32);
-			this.lblPermAddrCountry.TabIndex = 16;
-			this.lblPermAddrCountry.Text = "Country:";
-			// 
-			// lblPermAddrState
-			// 
-			this.lblPermAddrState.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.lblPermAddrState.AutoSize = true;
-			this.lblPermAddrState.Location = new System.Drawing.Point(60, 207);
-			this.lblPermAddrState.Name = "lblPermAddrState";
-			this.lblPermAddrState.Size = new System.Drawing.Size(90, 32);
-			this.lblPermAddrState.TabIndex = 17;
-			this.lblPermAddrState.Text = "State:";
-			// 
-			// cmbPermAddrState
-			// 
-			this.cmbPermAddrState.FormattingEnabled = true;
-			this.cmbPermAddrState.Location = new System.Drawing.Point(170, 207);
-			this.cmbPermAddrState.Name = "cmbPermAddrState";
-			this.cmbPermAddrState.Size = new System.Drawing.Size(157, 39);
-			this.cmbPermAddrState.TabIndex = 18;
-			// 
-			// cmbPermAddrCountry
-			// 
-			this.cmbPermAddrCountry.FormattingEnabled = true;
-			this.cmbPermAddrCountry.Location = new System.Drawing.Point(170, 339);
-			this.cmbPermAddrCountry.Name = "cmbPermAddrCountry";
-			this.cmbPermAddrCountry.Size = new System.Drawing.Size(157, 39);
-			this.cmbPermAddrCountry.TabIndex = 19;
+			this.lblPermAddr1.AutoSize = true;
+			this.lblPermAddr1.Location = new System.Drawing.Point(14, 72);
+			this.lblPermAddr1.Name = "lblPermAddr1";
+			this.lblPermAddr1.Size = new System.Drawing.Size(150, 32);
+			this.lblPermAddr1.TabIndex = 10;
+			this.lblPermAddr1.Text = "Address 1:";
 			// 
 			// gpbxTemporaryAddress
 			// 
+			this.gpbxTemporaryAddress.Controls.Add(this.txtTempAddrCity);
+			this.gpbxTemporaryAddress.Controls.Add(this.lblTempAddrCity);
 			this.gpbxTemporaryAddress.Controls.Add(this.cmbTempAddrCountry);
 			this.gpbxTemporaryAddress.Controls.Add(this.cmbTempAddrState);
 			this.gpbxTemporaryAddress.Controls.Add(this.lblTempAddrState);
@@ -300,15 +324,31 @@
 			this.gpbxTemporaryAddress.Controls.Add(this.lblTempAddr1);
 			this.gpbxTemporaryAddress.Location = new System.Drawing.Point(617, 209);
 			this.gpbxTemporaryAddress.Name = "gpbxTemporaryAddress";
-			this.gpbxTemporaryAddress.Size = new System.Drawing.Size(484, 395);
+			this.gpbxTemporaryAddress.Size = new System.Drawing.Size(484, 460);
 			this.gpbxTemporaryAddress.TabIndex = 20;
 			this.gpbxTemporaryAddress.TabStop = false;
 			this.gpbxTemporaryAddress.Text = "Temporary Address";
 			// 
+			// txtTempAddrCity
+			// 
+			this.txtTempAddrCity.Location = new System.Drawing.Point(170, 210);
+			this.txtTempAddrCity.Name = "txtTempAddrCity";
+			this.txtTempAddrCity.Size = new System.Drawing.Size(265, 38);
+			this.txtTempAddrCity.TabIndex = 20;
+			// 
+			// lblTempAddrCity
+			// 
+			this.lblTempAddrCity.AutoSize = true;
+			this.lblTempAddrCity.Location = new System.Drawing.Point(92, 213);
+			this.lblTempAddrCity.Name = "lblTempAddrCity";
+			this.lblTempAddrCity.Size = new System.Drawing.Size(72, 32);
+			this.lblTempAddrCity.TabIndex = 21;
+			this.lblTempAddrCity.Text = "City:";
+			// 
 			// cmbTempAddrCountry
 			// 
 			this.cmbTempAddrCountry.FormattingEnabled = true;
-			this.cmbTempAddrCountry.Location = new System.Drawing.Point(170, 339);
+			this.cmbTempAddrCountry.Location = new System.Drawing.Point(170, 409);
 			this.cmbTempAddrCountry.Name = "cmbTempAddrCountry";
 			this.cmbTempAddrCountry.Size = new System.Drawing.Size(157, 39);
 			this.cmbTempAddrCountry.TabIndex = 19;
@@ -316,7 +356,7 @@
 			// cmbTempAddrState
 			// 
 			this.cmbTempAddrState.FormattingEnabled = true;
-			this.cmbTempAddrState.Location = new System.Drawing.Point(170, 207);
+			this.cmbTempAddrState.Location = new System.Drawing.Point(170, 277);
 			this.cmbTempAddrState.Name = "cmbTempAddrState";
 			this.cmbTempAddrState.Size = new System.Drawing.Size(157, 39);
 			this.cmbTempAddrState.TabIndex = 18;
@@ -326,7 +366,7 @@
 			this.lblTempAddrState.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.lblTempAddrState.AutoSize = true;
-			this.lblTempAddrState.Location = new System.Drawing.Point(60, 207);
+			this.lblTempAddrState.Location = new System.Drawing.Point(74, 277);
 			this.lblTempAddrState.Name = "lblTempAddrState";
 			this.lblTempAddrState.Size = new System.Drawing.Size(90, 32);
 			this.lblTempAddrState.TabIndex = 17;
@@ -335,7 +375,7 @@
 			// lblTempAddrCountry
 			// 
 			this.lblTempAddrCountry.AutoSize = true;
-			this.lblTempAddrCountry.Location = new System.Drawing.Point(28, 339);
+			this.lblTempAddrCountry.Location = new System.Drawing.Point(42, 409);
 			this.lblTempAddrCountry.Name = "lblTempAddrCountry";
 			this.lblTempAddrCountry.Size = new System.Drawing.Size(122, 32);
 			this.lblTempAddrCountry.TabIndex = 16;
@@ -343,7 +383,7 @@
 			// 
 			// txtTempAddrZip
 			// 
-			this.txtTempAddrZip.Location = new System.Drawing.Point(170, 273);
+			this.txtTempAddrZip.Location = new System.Drawing.Point(170, 343);
 			this.txtTempAddrZip.Name = "txtTempAddrZip";
 			this.txtTempAddrZip.Size = new System.Drawing.Size(157, 38);
 			this.txtTempAddrZip.TabIndex = 13;
@@ -351,7 +391,7 @@
 			// lblTempAddrZip
 			// 
 			this.lblTempAddrZip.AutoSize = true;
-			this.lblTempAddrZip.Location = new System.Drawing.Point(14, 273);
+			this.lblTempAddrZip.Location = new System.Drawing.Point(28, 343);
 			this.lblTempAddrZip.Name = "lblTempAddrZip";
 			this.lblTempAddrZip.Size = new System.Drawing.Size(138, 32);
 			this.lblTempAddrZip.TabIndex = 14;
@@ -402,7 +442,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1116, 707);
+			this.ClientSize = new System.Drawing.Size(1116, 763);
 			this.Controls.Add(this.lblGender);
 			this.Controls.Add(this.gpbxTemporaryAddress);
 			this.Controls.Add(this.gpbxPermanentAddress);
@@ -467,6 +507,10 @@
 		private System.Windows.Forms.TextBox txtTempAddr1;
 		private System.Windows.Forms.Label lblTempAddr1;
 		private System.Windows.Forms.Label lblGender;
+		private System.Windows.Forms.TextBox txtPermAddrCity;
+		private System.Windows.Forms.Label lblPermAddrCity;
+		private System.Windows.Forms.TextBox txtTempAddrCity;
+		private System.Windows.Forms.Label lblTempAddrCity;
 	}
 }
 

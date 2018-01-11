@@ -45,6 +45,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Country.cs" />
+    <Compile Include="DBOperations.cs" />
     <Compile Include="MyForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -53,6 +55,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="USStates.cs" />
     <EmbeddedResource Include="MyForm.resx">
       <DependentUpon>MyForm.cs</DependentUpon>
     </EmbeddedResource>

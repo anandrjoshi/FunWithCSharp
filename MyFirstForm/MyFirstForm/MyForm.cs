@@ -16,6 +16,7 @@ namespace MyFirstForm
 		{
 			InitializeComponent();
 			List<USStates> states = DBOperations.GetAllUSStates();
+			List<Country> countries = DBOperations.GetAllCountries();
 		}
 	}
 }

@@ -8,3 +8,5 @@ BEGIN
 	FROM dbo.USStates
 END
 GO
+
+GRANT EXEC on dbo.sp_GetAllUsStates to PUBLIC

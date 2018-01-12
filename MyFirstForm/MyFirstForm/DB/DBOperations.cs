@@ -14,9 +14,9 @@ namespace MyFirstForm
 			return new SqlConnection("Data Source=MYLAPTOP\\SQLEXPRESS;Initial Catalog=dbo;User ID=world;Password=Password1");
 		}
 
-		public static List<USStates> GetAllUSStates()
+		public static List<IUSState> GetAllUSStates()
 		{
-			List<USStates> allUSStates = new List<USStates>();
+			List<IUSState> allUSStates = new List<IUSState>();
 
 			using (SqlConnection connection = GetSQLConnection())
 			using (SqlCommand cmd = new SqlCommand("dbo.sp_GetAllUSStates", connection))
@@ -30,7 +30,7 @@ namespace MyFirstForm
 						// Read advances to the next row.
 						while (reader.Read())
 						{
-							USStates state	 = new USStates();
+							USState state	 = new USState();
 							// To avoid unexpected bugs access columns by name.
 							state.ID = reader.GetInt32(reader.GetOrdinal("USStates_ID"));
 							state.State_Abbrev = reader.GetString(reader.GetOrdinal("State_Abbrev"));
@@ -45,9 +45,9 @@ namespace MyFirstForm
 			return allUSStates;
 		}
 
-		public static List<Country> GetAllCountries()
+		public static List<ICountry> GetAllCountries()
 		{
-			List<Country> allCountries = new List<Country>();
+			List<ICountry> allCountries = new List<ICountry>();
 
 			using (SqlConnection connection = GetSQLConnection())
 			using (SqlCommand cmd = new SqlCommand("dbo.sp_GetAllCountries", connection))

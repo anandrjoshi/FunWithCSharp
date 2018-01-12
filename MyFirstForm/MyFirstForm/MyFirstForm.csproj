@@ -45,19 +45,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Country.cs" />
-    <Compile Include="DBOperations.cs" />
-    <Compile Include="MyForm.cs">
+    <Compile Include="Controller\PersonalDetailsController.cs" />
+    <Compile Include="Interfaces\ICountry.cs" />
+    <Compile Include="Interfaces\IUSState.cs" />
+    <Compile Include="Model\Country.cs" />
+    <Compile Include="DB\DBOperations.cs" />
+    <Compile Include="View\PersonalDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MyForm.Designer.cs">
-      <DependentUpon>MyForm.cs</DependentUpon>
+    <Compile Include="View\PersonalDetails.Designer.cs">
+      <DependentUpon>PersonalDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="USStates.cs" />
-    <EmbeddedResource Include="MyForm.resx">
-      <DependentUpon>MyForm.cs</DependentUpon>
+    <Compile Include="Model\USState.cs" />
+    <EmbeddedResource Include="View\PersonalDetails.resx">
+      <DependentUpon>PersonalDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -81,5 +84,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

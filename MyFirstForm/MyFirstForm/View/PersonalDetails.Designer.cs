@@ -459,6 +459,7 @@
 			this.Controls.Add(this.OkCancelPanel);
 			this.Name = "MyForm";
 			this.Text = "Personal Details";
+			this.Load += new System.EventHandler(this.MyForm_Load);
 			this.OkCancelPanel.ResumeLayout(false);
 			this.gpbxPermanentAddress.ResumeLayout(false);
 			this.gpbxPermanentAddress.PerformLayout();

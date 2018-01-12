@@ -6,12 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyFirstForm
 {
-	public class Country
+	public interface ICountry
 	{
-		public int ID { get; set; }
-
-		public string Country_Abbrev { get; set; }
-
-		public string Country_Description { get; set; }
 	}
 }

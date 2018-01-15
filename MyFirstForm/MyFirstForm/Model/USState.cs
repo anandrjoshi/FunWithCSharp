@@ -13,5 +13,6 @@ namespace MyFirstForm
 		public string State_Abbrev { get; set; }
 
 		public string State_Description { get; set; }
+
 	}
 }

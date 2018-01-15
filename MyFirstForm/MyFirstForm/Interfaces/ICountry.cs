@@ -8,5 +8,8 @@ namespace MyFirstForm
 {
 	public interface ICountry
 	{
+		int ID { get; set; }
+
+		string Country_Abbrev { get; set; }
 	}
 }

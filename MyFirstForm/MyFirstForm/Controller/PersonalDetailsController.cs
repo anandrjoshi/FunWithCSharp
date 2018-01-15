@@ -11,7 +11,7 @@ namespace MyFirstForm
 		private List<IUSState> _states;
 		private List<ICountry> _countries;
 
-		public  List<string> GetCountryAbbrev()
+		public List<string> GetCountryAbbrev()
 		{
 			if (_countries == null)
 			{
@@ -33,6 +33,24 @@ namespace MyFirstForm
 			List<string> stateAbbrev = new List<string>();
 			stateAbbrev.AddRange(_states.Select(item => (item as USState).State_Abbrev));
 			return stateAbbrev;
+		}
+
+		public List<IUSState> GetAllStates()
+		{
+			if (_states == null)
+			{
+				_states = DBOperations.GetAllUSStates();
+			}
+			return _states;
+		}
+
+		public List<ICountry> GetAllCountries()
+		{
+			if (_countries == null)
+			{
+				_countries = DBOperations.GetAllCountries();
+			}
+			return _countries;
 		}
 	}
 }

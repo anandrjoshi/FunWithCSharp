@@ -8,5 +8,8 @@ namespace MyFirstForm
 {
 	public interface IUSState
 	{
+		string State_Abbrev{get; set;}
+
+		int ID { get; set; }
 	}
 }

@@ -47,9 +47,11 @@
   <ItemGroup>
     <Compile Include="Controller\PersonalDetailsController.cs" />
     <Compile Include="Interfaces\ICountry.cs" />
+    <Compile Include="Interfaces\IPersonalDetail.cs" />
     <Compile Include="Interfaces\IUSState.cs" />
     <Compile Include="Model\Country.cs" />
     <Compile Include="DB\DBOperations.cs" />
+    <Compile Include="Model\PersonalDetail.cs" />
     <Compile Include="View\PersonalDetails.cs">
       <SubType>Form</SubType>
     </Compile>

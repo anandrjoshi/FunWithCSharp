@@ -45,5 +45,35 @@ namespace MyFirstForm
 			cmbTempAddrCountry.ValueMember = "ID";
 			cmbTempAddrCountry.DataSource = _controller.GetAllCountries();
 		}
+
+		private void btnOk_Click(object sender, EventArgs e)
+		{
+			PersonalDetail personalDetail = new PersonalDetail();
+			personalDetail.FirstName = "Sherlock";
+			personalDetail.MiddleInitials = 'R';
+			personalDetail.LastName = "Holmes";
+			personalDetail.Gender = "Male";
+			personalDetail.DOB = new DateTime(1854, 12, 25);
+			personalDetail.PermAddrRow1 = "221B";
+			personalDetail.PermAddrRow2 = "Baker St";
+			personalDetail.PermAddrCity = "London";
+			personalDetail.PermAddrState = 1;
+			personalDetail.PermAddrZipCode = "30006";
+			personalDetail.PermAddrCountry = 2;
+			personalDetail.TempAddrRow1 = "10";
+			personalDetail.TempAddrRow2 = "Downing St";
+			personalDetail.TempAddrCity = "London";
+			personalDetail.TempAddrState = 1;
+			personalDetail.TempAddrZipCode = "30004";
+			personalDetail.TempAddrCountry = 2;
+
+			_controller.InsertPersonalDetail(personalDetail);
+
+		}
+
+		private void btnCancel_Click(object sender, EventArgs e)
+		{
+			this.Close();
+		}
 	}
 }

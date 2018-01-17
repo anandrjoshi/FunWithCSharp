@@ -52,5 +52,10 @@ namespace MyFirstForm
 			}
 			return _countries;
 		}
+
+		internal void InsertPersonalDetail(PersonalDetail personalDetail)
+		{
+			DBOperations.InsertPersonalDetails(personalDetail);
+		}
 	}
 }

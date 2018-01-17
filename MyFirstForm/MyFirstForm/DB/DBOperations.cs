@@ -75,5 +75,36 @@ namespace MyFirstForm
 
 			return allCountries;
 		}
+
+		static public void InsertPersonalDetails(PersonalDetail personalDetail)
+		{
+			using (SqlConnection connection = GetSQLConnection())
+			{
+				connection.Open();
+
+				SqlCommand cmd = new SqlCommand("dbo.sp_InsertPersonalDetails", connection);
+				cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+				cmd.Parameters.AddWithValue("@FirstName", personalDetail.FirstName);
+				cmd.Parameters.AddWithValue("@MiddleInitials", personalDetail.MiddleInitials);
+				cmd.Parameters.AddWithValue("@LastName", personalDetail.LastName);
+				cmd.Parameters.AddWithValue("@Gender", personalDetail.Gender);
+				cmd.Parameters.AddWithValue("@DOB", personalDetail.DOB);
+				cmd.Parameters.AddWithValue("@PermAddrRow1", personalDetail.PermAddrRow1);
+				cmd.Parameters.AddWithValue("@PermAddrRow2", personalDetail.PermAddrRow2);
+				cmd.Parameters.AddWithValue("@PermAddrCity", personalDetail.PermAddrCity);
+				cmd.Parameters.AddWithValue("@PermAddrZipCode", personalDetail.PermAddrZipCode);
+				cmd.Parameters.AddWithValue("@PermAddrState", personalDetail.PermAddrState);
+				cmd.Parameters.AddWithValue("@PermAddrCountry", personalDetail.PermAddrCountry);
+				cmd.Parameters.AddWithValue("@TempAddrRow1", personalDetail.TempAddrRow1);
+				cmd.Parameters.AddWithValue("@TempAddrRow2", personalDetail.TempAddrRow2);
+				cmd.Parameters.AddWithValue("@TempAddrCity", personalDetail.TempAddrCity);
+				cmd.Parameters.AddWithValue("@TempAddrZipCode", personalDetail.TempAddrZipCode);
+				cmd.Parameters.AddWithValue("@TempAddrState", personalDetail.TempAddrState);
+				cmd.Parameters.AddWithValue("@TempAddrCountry", personalDetail.TempAddrCountry);
+
+				cmd.ExecuteNonQuery();
+			}
+		}
 	}
 }

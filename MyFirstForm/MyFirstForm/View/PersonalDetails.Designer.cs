@@ -90,6 +90,7 @@
 			this.btnCancel.TabIndex = 0;
 			this.btnCancel.Text = "Cancel";
 			this.btnCancel.UseVisualStyleBackColor = true;
+			this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
 			// 
 			// btnOk
 			// 
@@ -99,6 +100,7 @@
 			this.btnOk.TabIndex = 0;
 			this.btnOk.Text = "OK";
 			this.btnOk.UseVisualStyleBackColor = true;
+			this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
 			// 
 			// txtFirstName
 			// 
